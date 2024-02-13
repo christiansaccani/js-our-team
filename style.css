@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 2em;
+    row-gap: 2em;
+    max-width: 66vw;
+}
+
+h1 {
+    text-align: center;
+}
