@@ -58,6 +58,7 @@ for (let i=0; i < members.length; i++) {
     const newElement = document.createElement("div");
     newElement.className = "card";
     newElement.style.width = "18rem";
+    newElement.style.border = "1px solid black";
     containerEl.append(newElement);
 
     let memberPic = members[i].pic;
@@ -68,13 +69,13 @@ for (let i=0; i < members.length; i++) {
 
     let memberName = members[i].name;
     let newNameElement = document.createElement('h5');
-    newNameElement.className = "card-title";
+    newNameElement.className = "card-title px-2";
     newNameElement.innerText = memberName;
     newElement.append(newNameElement);
 
     let memberRole = members[i].role;
     let newRoleElement = document.createElement('p');
-    newRoleElement.className = "card-text";
+    newRoleElement.className = "card-text px-2";
     newRoleElement.innerText = memberRole;
     newElement.append(newRoleElement);
 
