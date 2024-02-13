@@ -1,3 +1,5 @@
+// variabili
+
 const members = [
     {
         name: 'Wayne Barnett',
@@ -31,16 +33,17 @@ const members = [
     }
 ];
 
+const table = document.querySelector("#table");
+
 // stampo su console le singole info di ogni membro
 
 for (let i=0; i < members.length; i++) {
 
     const nowMember = members[i];
+    table.innerHTML += `<li>${i}</li>`
 
     for (let key in nowMember) {
-        console.log(key + ": " + nowMember[key]);
+        let infoIs = (nowMember[key]);
+        table.innerHTML += `${infoIs} ; `
     }
 }
-
-
-
