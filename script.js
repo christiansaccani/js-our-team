@@ -30,3 +30,17 @@ const members = [
         pic: 'barbara-ramos-graphic-designer.jpg',
     }
 ];
+
+// stampo su console le singole info di ogni membro
+
+for (let i=0; i < members.length; i++) {
+
+    const nowMember = members[i];
+
+    for (let key in nowMember) {
+        console.log(key + ": " + nowMember[key]);
+    }
+}
+
+
+
