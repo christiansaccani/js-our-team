@@ -4,32 +4,32 @@ const members = [
     {
         name: 'Wayne Barnett',
         role: 'Founder & CEO',
-        pic: 'img/wayne-barnett-founder-ceo.jpg',
+        pic: 'wayne-barnett-founder-ceo.jpg',
     },
     {
         name: 'Angela Caroll',
         role: 'Chief Editor',
-        pic: 'img/angela-caroll-chief-editor.jpg',
+        pic: 'angela-caroll-chief-editor.jpg',
     },
     {
         name: 'Walter Gordon',
         role: 'Office Manager',
-        pic: 'img/walter-gordon-office-manager.jpg',
+        pic: 'walter-gordon-office-manager.jpg',
     },
     {
         name: 'Angela Lopez',
         role: 'Social Media Manager',
-        pic: 'img/angela-lopez-social-media-manager.jpg',
+        pic: 'angela-lopez-social-media-manager.jpg',
     },
     {
         name: 'Scott Estrada',
         role: 'Developer',
-        pic: 'img/scott-estrada-developer.jpg',
+        pic: 'scott-estrada-developer.jpg',
     },
     {
         name: 'Barbara Ramos',
         role: 'Graphic Designer',
-        pic: 'img/barbara-ramos-graphic-designer.jpg',
+        pic: 'barbara-ramos-graphic-designer.jpg',
     }
 ];
 
@@ -56,27 +56,23 @@ for (let i=0; i < members.length; i++) {
 for (let i=0; i < members.length; i++) {
     
     const newElement = document.createElement("div");
-    newElement.className = "card";
+    newElement.className = "card p-1";
     newElement.style.width = "18rem";
-    newElement.style.border = "1px solid black";
     containerEl.append(newElement);
 
-    let memberPic = members[i].pic;
     let newPicElement = document.createElement('img');
     newPicElement.className = "card-img-top";
-    newPicElement.src = memberPic;
+    newPicElement.src = "img/" + members[i].pic;
     newElement.append(newPicElement);
 
-    let memberName = members[i].name;
     let newNameElement = document.createElement('h5');
-    newNameElement.className = "card-title px-2";
-    newNameElement.innerText = memberName;
+    newNameElement.className = "card-title text-center";
+    newNameElement.innerText = members[i].name;
     newElement.append(newNameElement);
 
-    let memberRole = members[i].role;
     let newRoleElement = document.createElement('p');
-    newRoleElement.className = "card-text px-2";
-    newRoleElement.innerText = memberRole;
+    newRoleElement.className = "card-text text-center";
+    newRoleElement.innerText = members[i].role;
     newElement.append(newRoleElement);
 
 }
