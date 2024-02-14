@@ -4,32 +4,32 @@ const members = [
     {
         name: 'Wayne Barnett',
         role: 'Founder & CEO',
-        pic: './img/wayne-barnett-founder-ceo.jpg',
+        pic: 'img/wayne-barnett-founder-ceo.jpg',
     },
     {
         name: 'Angela Caroll',
         role: 'Chief Editor',
-        pic: './img/angela-caroll-chief-editor.jpg',
+        pic: 'img/angela-caroll-chief-editor.jpg',
     },
     {
         name: 'Walter Gordon',
         role: 'Office Manager',
-        pic: './img/walter-gordon-office-manager.jpg',
+        pic: 'img/walter-gordon-office-manager.jpg',
     },
     {
         name: 'Angela Lopez',
         role: 'Social Media Manager',
-        pic: './img/angela-lopez-social-media-manager.jpg',
+        pic: 'img/angela-lopez-social-media-manager.jpg',
     },
     {
         name: 'Scott Estrada',
         role: 'Developer',
-        pic: './img/scott-estrada-developer.jpg',
+        pic: 'img/scott-estrada-developer.jpg',
     },
     {
         name: 'Barbara Ramos',
         role: 'Graphic Designer',
-        pic: './img/barbara-ramos-graphic-designer.jpg',
+        pic: 'img/barbara-ramos-graphic-designer.jpg',
     }
 ];
 
@@ -37,18 +37,18 @@ const table = document.querySelector("#table");
 const containerEl = document.querySelector(".container");
 
 
-// stampo su console le singole info di ogni membro
+// stampo in pagina le singole info di ogni membro
 
 for (let i=0; i < members.length; i++) {
 
     const nowMember = members[i];
-    table.innerHTML += `<li>Member ${i + 1}:</li>`
+    const newElement = document.createElement("li");
+    table.append(newElement);
 
     for (let key in nowMember) {
-        let infoIs = (nowMember[key]);
-        table.innerHTML += `${infoIs} ; `
-
+        newElement.innerHTML += `${(nowMember[key])} | `
     }
+
 }
 
 // -------------------------------------------------------------  //
